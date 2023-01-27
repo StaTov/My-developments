@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+        .marked {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Highlight like a table, you know?</h1>
+    <h2>'Click' on list</h2>
+    <p>you can use Ctrl or Cmd(for mac) </p>
+    <ul id="table">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>4</li>
+        <li>Five</li>
+    </ul>
+    <script>
+
+        table.onmousedown = () => { return false };
+        table.addEventListener('click', handler);
+
+        function toggleClass(elem) {
+            elem.classList.toggle('marked');
+        }
+
+        function handler(event) {
+
+            let target = event.target;
+            if (target.tagName == 'LI' && table.contains(target)) {
+
+                toggleClass(target)
+
+                if (event.ctrlKey || event.metaKey) {
+                    return
+                } else {
+                    for (elem of table.children) {
+                        if (elem != target) {
+                            elem.classList.remove('marked')
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
