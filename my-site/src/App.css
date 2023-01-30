@@ -1,0 +1,5 @@
+.main-wrapper {
+    grid-template-areas:
+    'header header'
+    'navbar, content';
+    font-family: sans-serif }
