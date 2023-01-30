@@ -2,12 +2,15 @@
 grid-area: navbar;
 }
 .item {
-    margin: 10px;
+    margin-top: 10px;
     list-style-type: none;
 
 
 }
 .item a {
     text-decoration: none;
+    color: darkslategray;
+}
+a:visited {
     color: darkslategray;
 }

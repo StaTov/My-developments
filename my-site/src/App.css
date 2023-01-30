@@ -1,5 +1,8 @@
 .main-wrapper {
+    display: grid;
     grid-template-areas:
     'header header'
-    'navbar, content';
-    font-family: sans-serif }
+    'navbar main  ';
+    font-family: sans-serif;
+    grid-template-columns: 150px 1fr;
+}
